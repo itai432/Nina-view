@@ -15,7 +15,7 @@ const MainProject: React.FC = () => {
     slidesToScroll: 1,
   };
 
-  const styles = {
+  const styles: { [key: string]: React.CSSProperties } = {
     projectContainer: {
         display: "flex",
         justifyContent: "center",
@@ -78,7 +78,6 @@ const MainProject: React.FC = () => {
           <iframe
             style={styles.iframeStyle}
             src={videoEmbedUrl}
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             title="Embedded video"
