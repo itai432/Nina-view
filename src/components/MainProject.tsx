@@ -3,6 +3,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
+const videoEmbedUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ";
+
 const MainProject: React.FC = () => {
   const settings = {
     dots: true,
@@ -38,6 +41,19 @@ const MainProject: React.FC = () => {
       margin: "auto",
       borderRadius: "10px",
     },
+    videoContainer: {
+      position: "relative",
+      width: "100%", 
+      paddingTop: "56.25%",
+      marginBottom: "20px",
+    },
+    iframeStyle: {
+      position: "absolute",
+      top: "0",
+      left: "0",
+      width: "100%",
+      height: "100%",
+    },
   };
 
   return (
@@ -57,11 +73,19 @@ const MainProject: React.FC = () => {
             <img src="https://www.usatoday.com/gcdn/media/2022/06/21/USATODAY/usatsports/MotleyFool-TMOT-df6a78b9-5667c6ca.jpg?width=660&height=455&fit=crop&format=pjpg&auto=webp" alt="Slide 3" />
           </div>
         </Slider>
-                {/* Embed video here */}
-
+        <br />
+        <div style={styles.videoContainer}>
+          <iframe
+            style={styles.iframeStyle}
+            src={videoEmbedUrl}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title="Embedded video"
+          ></iframe>
+        </div>
       </div>
     </div>
   );
 };
-
 export default MainProject;
