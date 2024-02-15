@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-const videoEmbedUrl = "src/assets/Nina-3.mp4";
+const videoEmbedUrl = "https://www.youtube.com/embed/uJLfzhYC6RE";
 
 const ArrowLeft = (props:any) => (
   <button style={{backgroundColor:"red", border: 0}} {...props} className={'prev'}>
@@ -73,9 +73,6 @@ const MainProject: React.FC = () => {
       width: "100%",
       height: "100%",
     },
-    btn:{
-      backgroundColor: "red"
-    }
   };
 
   return (
