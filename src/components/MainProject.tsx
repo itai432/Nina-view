@@ -96,10 +96,10 @@ const MainProject: React.FC = () => {
           ></iframe>
           </div>
           <div>
-            <img style={styles.mainPhoto} src="src\assets\Nina-2.jpg" alt="Img-1" />
+            <img style={styles.mainPhoto} src="https://i.postimg.cc/hjbtpkLM/Nina-1.jpg" alt="Img-1" />
           </div>
           <div>
-            <img style={styles.mainPhoto} src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="Img-2" />
+            <img style={styles.mainPhoto} src="https://i.postimg.cc/fbH1f5Fp/Nina-2.jpg" alt="Img-2" />
           </div>
           <div>
             <img style={styles.mainPhoto} src="https://www.usatoday.com/gcdn/media/2022/06/21/USATODAY/usatsports/MotleyFool-TMOT-df6a78b9-5667c6ca.jpg?width=660&height=455&fit=crop&format=pjpg&auto=webp" alt="Img-3" />
