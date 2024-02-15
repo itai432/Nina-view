@@ -78,8 +78,8 @@ const MainProject: React.FC = () => {
     <div style={styles.projectContainer}>
       <div style={styles.projectFrame}>
         <div style={styles.header}>
-        <h1>Project Title</h1>
-        <p>Description of the project...</p>
+        <h1>SPIRIT CREATOR</h1>
+        <p>You can slide to the sides or navigate with the buttons to view additional photos of the project (or video)</p>
         </div>
         <Slider {...settings}>
         <div>
