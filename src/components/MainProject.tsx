@@ -4,15 +4,32 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-const videoEmbedUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ";
+const videoEmbedUrl = "src/assets/Nina-3.mp4";
 
+const ArrowRight = (props:any) => (
+  <button style={{background:"red", border: 0}} {...props} className={'next'}>
+    next
+  </button>
+);
+const ArrowLeft = (props:any) => (
+  <button style={{background:"red", border: 0}} {...props} className={'prev'}>
+    back
+  </button>
+);
 const MainProject: React.FC = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    adaptiveHeight: true,
+    arrows: true,
+    nextArrow: <ArrowRight />,
+    prevArrow: <ArrowLeft />,
+    autoplaySpeed: 5000,
+
   };
 
   const styles: { [key: string]: React.CSSProperties } = {
@@ -20,20 +37,24 @@ const MainProject: React.FC = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh",  // This will make the container take the full viewport height
-        width: "100%",    // Changed from 100vh to 100% to take the full width of the parent
+        height: "100vh",
+        width: "100%",
       },
       projectFrame: {
         padding: "20px",
         borderRadius: "15px",
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
         maxWidth: "800px",
-        width: "100%",    // Ensure it can grow up to the maxWidth
+        width: "100%",
         margin: "auto",
         background: "#fff",
       },
+      header:{
+        color: "black",
+      },
     mainPhoto: {
       width: "100%",
+      height: "50rem",
       borderRadius: "10px",
       marginBottom: "20px",
     },
@@ -42,10 +63,8 @@ const MainProject: React.FC = () => {
       borderRadius: "10px",
     },
     videoContainer: {
-      position: "relative",
       width: "100%", 
-      paddingTop: "56.25%",
-      marginBottom: "20px",
+      height:"50rem"
     },
     iframeStyle: {
       position: "absolute",
@@ -54,35 +73,39 @@ const MainProject: React.FC = () => {
       width: "100%",
       height: "100%",
     },
+    btn:{
+      backgroundColor: "red"
+    }
   };
 
   return (
     <div style={styles.projectContainer}>
       <div style={styles.projectFrame}>
-      <h1>Project Title</h1>
-        <img src="https://es.celoxis.com/cassets/img/pmc/project-management.png" alt="Main" style={styles.mainPhoto} />
+        <div style={styles.header}>
+        <h1>Project Title</h1>
         <p>Description of the project...</p>
-        <Slider {...settings}>
-          <div>
-            <img src="https://api.time.com/wp-content/uploads/2019/08/better-smartphone-photos.jpg" alt="Slide 1" />
-          </div>
-          <div>
-            <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="Slide 2" />
-          </div>
-          <div>
-            <img src="https://www.usatoday.com/gcdn/media/2022/06/21/USATODAY/usatsports/MotleyFool-TMOT-df6a78b9-5667c6ca.jpg?width=660&height=455&fit=crop&format=pjpg&auto=webp" alt="Slide 3" />
-          </div>
-        </Slider>
-        <br />
-        <div style={styles.videoContainer}>
-          <iframe
-            style={styles.iframeStyle}
-            src={videoEmbedUrl}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title="Embedded video"
-          ></iframe>
         </div>
+        <Slider {...settings}>
+        <div>
+          <iframe
+            style={styles.videoContainer}
+            src={videoEmbedUrl}
+            // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            // title="Embedded video"
+          ></iframe>
+          </div>
+          <div>
+            <img style={styles.mainPhoto} src="src\assets\Nina-2.jpg" alt="Img-1" />
+          </div>
+          <div>
+            <img style={styles.mainPhoto} src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="Img-2" />
+          </div>
+          <div>
+            <img style={styles.mainPhoto} src="https://www.usatoday.com/gcdn/media/2022/06/21/USATODAY/usatsports/MotleyFool-TMOT-df6a78b9-5667c6ca.jpg?width=660&height=455&fit=crop&format=pjpg&auto=webp" alt="Img-3" />
+          </div>
+
+        </Slider>
       </div>
     </div>
   );

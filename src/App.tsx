@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import MainProject from './components/MainProject';
+import AboutUs from './pages/AboutUs';
 // Import AboutUs component when ready
 
 const App: React.FC = () => {
@@ -10,7 +11,7 @@ const App: React.FC = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<MainProject />} />
-        {/* Setup route for AboutUs component */}
+        <Route path="/About-Us" element={<AboutUs />} />
       </Routes>
     </Router>
   );
