@@ -54,7 +54,7 @@ const MainProject: React.FC = () => {
       },
     mainPhoto: {
       width: "100%",
-      height: "50rem",
+      height: "30rem",
       borderRadius: "10px",
       marginBottom: "20px",
     },
@@ -90,9 +90,9 @@ const MainProject: React.FC = () => {
           <iframe
             style={styles.videoContainer}
             src={videoEmbedUrl}
-            // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            // title="Embedded video"
+            title="Embedded video"
           ></iframe>
           </div>
           <div>
