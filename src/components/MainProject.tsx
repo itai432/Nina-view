@@ -92,9 +92,6 @@ const MainProject: React.FC = () => {
           ></iframe>
           </div>
           <div>
-            <img style={styles.mainPhoto} src="https://www.usatoday.com/gcdn/media/2022/06/21/USATODAY/usatsports/MotleyFool-TMOT-df6a78b9-5667c6ca.jpg?width=660&height=455&fit=crop&format=pjpg&auto=webp" alt="Img-1" />
-          </div>
-          <div>
             <img style={styles.mainPhoto} src="https://i.postimg.cc/fbH1f5Fp/Nina-2.jpg" alt="Img-2" />
           </div>
           <div>
