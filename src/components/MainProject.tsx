@@ -6,14 +6,14 @@ import "slick-carousel/slick/slick-theme.css";
 
 const videoEmbedUrl = "src/assets/Nina-3.mp4";
 
-const ArrowRight = (props:any) => (
-  <button style={{background:"red", border: 0}} {...props} className={'next'}>
-    next
+const ArrowLeft = (props:any) => (
+  <button style={{backgroundColor:"red", border: 0}} {...props} className={'prev'}>
+    back
   </button>
 );
-const ArrowLeft = (props:any) => (
-  <button style={{background:"red", border: 0}} {...props} className={'prev'}>
-    back
+const ArrowRight = (props:any) => (
+  <button style={{backgroundColor:"red", border: 0}} {...props} className={'next'}>
+    next
   </button>
 );
 const MainProject: React.FC = () => {
@@ -26,8 +26,8 @@ const MainProject: React.FC = () => {
     autoplay: true,
     adaptiveHeight: true,
     arrows: true,
-    nextArrow: <ArrowRight />,
     prevArrow: <ArrowLeft />,
+    nextArrow: <ArrowRight />,
     autoplaySpeed: 5000,
 
   };
@@ -44,7 +44,7 @@ const MainProject: React.FC = () => {
         padding: "20px",
         borderRadius: "15px",
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-        maxWidth: "800px",
+        maxWidth: "1200px",
         width: "100%",
         margin: "auto",
         background: "#fff",
@@ -54,7 +54,7 @@ const MainProject: React.FC = () => {
       },
     mainPhoto: {
       width: "100%",
-      height: "30rem",
+      height: "50rem",
       borderRadius: "10px",
       marginBottom: "20px",
     },
@@ -96,13 +96,13 @@ const MainProject: React.FC = () => {
           ></iframe>
           </div>
           <div>
-            <img style={styles.mainPhoto} src="https://i.postimg.cc/hjbtpkLM/Nina-1.jpg" alt="Img-1" />
+            <img style={styles.mainPhoto} src="https://www.usatoday.com/gcdn/media/2022/06/21/USATODAY/usatsports/MotleyFool-TMOT-df6a78b9-5667c6ca.jpg?width=660&height=455&fit=crop&format=pjpg&auto=webp" alt="Img-1" />
           </div>
           <div>
             <img style={styles.mainPhoto} src="https://i.postimg.cc/fbH1f5Fp/Nina-2.jpg" alt="Img-2" />
           </div>
           <div>
-            <img style={styles.mainPhoto} src="https://www.usatoday.com/gcdn/media/2022/06/21/USATODAY/usatsports/MotleyFool-TMOT-df6a78b9-5667c6ca.jpg?width=660&height=455&fit=crop&format=pjpg&auto=webp" alt="Img-3" />
+            <img style={styles.mainPhoto} src="https://i.postimg.cc/rFH2t5zQ/img-3.png" alt="Img-3" />
           </div>
 
         </Slider>
