@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../style/MainProject.scss"
 
 
 const videoEmbedUrl = "https://www.youtube.com/embed/uJLfzhYC6RE";
@@ -28,63 +29,19 @@ const MainProject: React.FC = () => {
     prevArrow: <ArrowLeft />,
     nextArrow: <ArrowRight />,
     autoplaySpeed: 5000,
-
-  };
-
-  const styles: { [key: string]: React.CSSProperties } = {
-    projectContainer: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        width: "100%",
-      },
-      projectFrame: {
-        padding: "20px",
-        borderRadius: "15px",
-        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-        maxWidth: "1200px",
-        width: "100%",
-        margin: "auto",
-        background: "#fff",
-      },
-      header:{
-        color: "black",
-      },
-    mainPhoto: {
-      width: "100%",
-      height: "50rem",
-      borderRadius: "10px",
-      marginBottom: "20px",
-    },
-    slickSlideImg: {
-      margin: "auto",
-      borderRadius: "10px",
-    },
-    videoContainer: {
-      width: "100%", 
-      height:"50rem"
-    },
-    iframeStyle: {
-      position: "absolute",
-      top: "0",
-      left: "0",
-      width: "100%",
-      height: "100%",
-    },
-  };
+  }
 
   return (
-    <div style={styles.projectContainer}>
-      <div style={styles.projectFrame}>
-        <div style={styles.header}>
+    <div className="projectContainer">
+      <div className="projectFrame">
+        <div className="header">
         <h1>SPIRIT CREATOR</h1>
         <p>You can slide to the sides or navigate with the buttons to view additional photos of the project (or video)</p>
         </div>
-        <Slider {...settings}>
+        <Slider className="slider" {...settings}>
         <div>
           <iframe
-            style={styles.videoContainer}
+            className="videoContainer"
             src={videoEmbedUrl}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -92,15 +49,16 @@ const MainProject: React.FC = () => {
           ></iframe>
           </div>
           <div>
-            <img style={styles.mainPhoto} src="https://i.postimg.cc/fbH1f5Fp/Nina-2.jpg" alt="Img-2" />
+            <img className="mainPhoto" src="https://i.postimg.cc/fbH1f5Fp/Nina-2.jpg" alt="Img-2" />
           </div>
           <div>
-            <img style={styles.mainPhoto} src="https://i.postimg.cc/rFH2t5zQ/img-3.png" alt="Img-3" />
+            <img className="mainPhoto" src="https://i.postimg.cc/rFH2t5zQ/img-3.png" alt="Img-3" />
           </div>
 
         </Slider>
       </div>
     </div>
-  );
-};
+    );
+  };
+  
 export default MainProject;

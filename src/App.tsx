@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import MainProject from './components/MainProject';
 import AboutUs from './pages/AboutUs';
-// Import AboutUs component when ready
 
 const App: React.FC = () => {
   return (
