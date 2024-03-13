@@ -8,6 +8,9 @@ const AboutUs: React.FC = () => {
     const itayGelbergImg =
     "https://i.postimg.cc/hGN24PD8/itai-gelberg.jpg";
 
+    const linkedinImg =
+    "https://i.postimg.cc/R0sZWhqY/linkedin.jpg"
+
   return (
     <div className="about-us-container">
       <h1 className="about-us-title">About Us</h1>
@@ -35,7 +38,7 @@ const AboutUs: React.FC = () => {
               <a
             href="https://www.linkedin.com/in/itay-amosi/"
             target="_blank"
-            ><img src="public\linkedin.jpg"
+            ><img src={linkedinImg}
             className="linkedinImg"
             /></a>
               </p>
@@ -51,7 +54,7 @@ const AboutUs: React.FC = () => {
               <a
             href="https://www.linkedin.com/in/itai-gelberg/"
             target="_blank"
-            ><img src="public\linkedin.jpg"
+            ><img src={linkedinImg}
             className="linkedinImg"
             /></a>
               </p>
